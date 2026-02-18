@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Michael Jade Estellore | Web Developer & SEO Specialist in Cebu</title>
+    <meta name="description" content="Michael Jade Estellore - Professional Web Developer & SEO Specialist from Cordova, Cebu. Specializing in WordPress development, custom websites, and digital marketing solutions.">
+    <meta name="keywords" content="Michael Jade Estellore, Web Developer Cebu, SEO Specialist, WordPress Developer, Cordova Cebu, WooCommerce, Website Development">
+    <meta name="author" content="Michael Jade Estellore">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Michael Jade Estellore | Web Developer & SEO Specialist">
+    <meta property="og:description" content="Professional Web Developer and SEO Specialist creating modern, responsive websites and delivering digital marketing solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/placeholder.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Michael Jade Estellore",
+      "jobTitle": "Web Developer & SEO Specialist",
+      "url": "https://michaeljadeestellore.streamperk.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ibabao, Cordova",
+        "addressRegion": "Cebu",
+        "addressCountry": "Philippines"
+      },
+      "telephone": "0927-127-8274",
+      "email": "michaeljadeestellore@gmail.com",
+      "knowsAbout": ["Web Development", "SEO", "WordPress", "WooCommerce", "Digital Marketing"]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.1); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5em;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-text .tagline {
+            font-size: 1.5em;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero-text p {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            animation: fadeIn 1s ease 0.8s backwards;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border: 8px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 40px;
+            background: #f8fafc;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.8em;
+            color: #1e293b;
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            color: #475569;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-item h3 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: #64748b;
+            font-size: 0.95em;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 100px 40px;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8em;
+            color: #1e293b;
+            margin-bottom: 60px;
+        }
+
+        .skills-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .skill-card h3 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .skill-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 100px 40px;
+            background: #f8fafc;
+        }
+
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .project-content p {
+            color: #64748b;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #764ba2;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            color: white;
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: #1e293b;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .success-message, .error-message {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        .success-message {
+            background: #10b981;
+            color: white;
+        }
+
+        .error-message {
+            background: #ef4444;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 60px 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            line-height: 2;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(102, 126, 234, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #667eea;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #475569;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5em;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .contact-form {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-text h1 {
+                font-size: 2em;
+            }
+
+            .hero-text .tagline {
+                font-size: 1.2em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">💻 MJE</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm Michael Jade Estellore</h1>
+                <p class="tagline">Web Developer & SEO Specialist</p>
+                <p>Transforming ideas into powerful digital experiences. I create modern, responsive websites and help businesses grow their online presence through strategic SEO and web development.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Michael.png" alt="Michael Jade Estellore - Web Developer">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I'm a passionate web developer and SEO specialist based in Cordova, Cebu. With a unique background as a seafarer for over 5 years, I bring discipline, adaptability, and a strong work ethic to every project.</p>
+                <p>I specialize in creating modern, user-friendly websites using the latest web technologies. My expertise spans from custom WordPress development to responsive web design and search engine optimization.</p>
+                <p>Whether you need a stunning new website, SEO optimization, or a complete digital transformation, I'm here to help bring your vision to life.</p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>2</h3>
+                    <p>Clients</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>Creating responsive, modern websites using HTML, CSS, JavaScript, and cutting-edge frameworks.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🔍</div>
+                <h3>SEO Optimization</h3>
+                <p>Boosting your online visibility with proven SEO strategies and techniques.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🎨</div>
+                <h3>WordPress Development</h3>
+                <p>Custom WordPress themes, plugins, and WooCommerce solutions tailored to your needs.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>Ensuring your website looks perfect on all devices, from mobile to desktop.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">⚡</div>
+                <h3>Performance Optimization</h3>
+                <p>Lightning-fast websites optimized for speed and user experience.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🛠️</div>
+                <h3>Custom Solutions</h3>
+                <p>Tailored web solutions designed specifically for your business goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🎮</div>
+                <div class="project-content">
+                    <h3>Streamperk</h3>
+                    <p>A comprehensive streaming platform featuring modern design and seamless user experience.</p>
+                    <a href="https://www.streamperk.com" target="_blank" class="project-link">View Project →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🐕</div>
+                <div class="project-content">
+                    <h3>Dog Wif Crown</h3>
+                    <p>Creative and engaging website with unique branding and interactive features.</p>
+                    <a href="https://dogwifcrown.streamperk.com" target="_blank" class="project-link">View Project →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">⚕️</div>
+                <div class="project-content">
+                    <h3>Alliance Care Medical</h3>
+                    <p>Professional healthcare website with patient-focused design and easy navigation.</p>
+                    <a href="https://www.alliancecaremedical.com" target="_blank" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Let's Work Together</h2>
+            <div class="contact-form">
+                <div id="successMessage" class="success-message">Thank you! Your message has been sent successfully.</div>
+                <div id="errorMessage" class="error-message">Oops! Something went wrong. Please try again.</div>
+                
+                <form id="contactForm" action="https://formspree.io/f/xyzypknb" method="POST">
+                    <input type="hidden" name="_to" value="estelloremichaeljade@gmail.com">
+                    <input type="hidden" name="_subject" value="New Contact from Portfolio Website">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Michael Jade Estellore</h3>
+                <p>Web Developer & SEO Specialist</p>
+                <p>Creating digital experiences that matter.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="LinkedIn">💼</a>
+                    <a href="#" title="GitHub">💻</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📍 Ibabao, Cordova, Cebu</p>
+                <p>📞 0927-127-8274</p>
+                <p>✉️ michaeljadeestellore@gmail.com</p>
+              
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Michael Jade Estellore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Contact form
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    successMessage.style.display = 'block';
+                    errorMessage.style.display = 'none';
+                    form.reset();
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                errorMessage.style.display = 'block';
+                successMessage.style.display = 'none';
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 5000);
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
